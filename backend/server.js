@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 const __dirname1 = path.resolve();
 if(process.env.NODE_ENV === 'production'){
 
-    app.use(express.static(path.join(__dirname1,"portfolio/dist/portfolio")))
+    app.use(express.static(path.join(__dirname1,"portfolio/dist")))
  
     app.get('*',(req,res)=>{
      res.sendFile(path.resolve(__dirname1,"portfolio/dist/portfolio/index.html"))
